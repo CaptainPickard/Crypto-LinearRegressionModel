@@ -18,7 +18,7 @@ instructions = """
 To get data fro the Binance API, please enter in the correct data following the prompt.
 Type 'exit' to complete the data gathering process and proceed with the regression mapping.
 
-Make sure that you have configured your own 'config.py; script which contains your API keys...
+Make sure that you have configured your own 'config.py' script which contains your API keys...
 
 ********************************************************************************************
 
@@ -41,7 +41,7 @@ def getData():
 
             for tick in klines:
                 candlestick_writer.writerow(tick)
-                
+
         else:
             running = False
             break
