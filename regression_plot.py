@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 from get_data import *
 
 
-def run():
+def regression():
     getData()
     data_frame = pd.read_csv('data\ETH_1day_data_1800day.csv')
 
@@ -34,4 +34,4 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    regression()

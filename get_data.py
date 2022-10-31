@@ -34,8 +34,6 @@ def getData():
             input_val_timeval = input('Please enter a nemerical time value in days: >>> ')
             input_val_crypto = str(input_val_crypto.upper())
             input_val_timeval = str(input_val_timeval)
-
-            print(input_val_crypto, input_val_timeval)
             klines = client.get_historical_klines(f"{input_val_crypto}USDT", Client.KLINE_INTERVAL_1DAY, f"{input_val_timeval} day ago UTC")
             csvfile = open(f'data/{input_val_crypto}_1day_data_{input_val_timeval}day.csv', 'w', newline='')
             candlestick_writer = csv.writer(csvfile, delimiter=',')
@@ -43,6 +41,7 @@ def getData():
 
             for tick in klines:
                 candlestick_writer.writerow(tick)
+                
         else:
             running = False
             break
