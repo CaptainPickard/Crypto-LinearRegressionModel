@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 from get_data import *
 
 
-def regression():
+def linearRegression():
     getData()
 
     # Pulling the data we want to base our prediction on
@@ -40,4 +40,4 @@ def regression():
 
 
 if __name__ == '__main__':
-    regression()
+    linearRegression()
