@@ -11,13 +11,27 @@ columns = [
     'ignore'
 ]
 
+instructions = """
+
+*******************************************************************************************
+
+To get data fro the Binance API, please enter in the correct data to the folloing prompt.
+Type 'exit' to complete the data gathering process and proceed with the regression mapping.
+
+Make sure that you have configured your own 'config.py; script which contains your API keys...
+
+*******************************************************************************************
+
+"""
+
 def getData():
     running = True
+    print(instructions)
     while running is True:
-        input_val_crypto = input('Please enter a Crypto Abbreviation: ')
+        input_val_crypto = input('Please enter a Crypto Abbreviation: >>> ')
         if input_val_crypto != 'exit':
 
-            input_val_timeval = input('Please enter a nemerical time value in days: ')
+            input_val_timeval = input('Please enter a nemerical time value in days: >>> ')
             input_val_crypto = str(input_val_crypto.upper())
             input_val_timeval = str(input_val_timeval)
 
