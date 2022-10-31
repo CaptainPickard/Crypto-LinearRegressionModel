@@ -13,14 +13,14 @@ columns = [
 
 instructions = """
 
-*******************************************************************************************
+********************************************************************************************
 
 To get data fro the Binance API, please enter in the correct data to the folloing prompt.
 Type 'exit' to complete the data gathering process and proceed with the regression mapping.
 
 Make sure that you have configured your own 'config.py; script which contains your API keys...
 
-*******************************************************************************************
+********************************************************************************************
 
 """
 
