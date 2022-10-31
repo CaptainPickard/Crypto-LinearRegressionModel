@@ -5,25 +5,32 @@ from sklearn.linear_model import LinearRegression
 from get_data import *
 
 
-def linearRegression():
-    getData()
 
-    # Pulling the data we want to base our prediction on
+def formatted_data():
+     # # Pulling the data we want to base our prediction on
     data_frame = pd.read_csv('data\ETH_1day_data_1800day.csv')
 
-    # Extracting the notable columns from the data frame
+    # # Extracting the notable columns from the data frame
     time_frame = data_frame.open_time
     pd_cp = data_frame.close
 
-    # Converting those data columns into numpy arrays in order to be use by sklearn
+    # # Converting those data columns into numpy arrays in order to be use by sklearn, 
+    # and making the variable coordinates global as to be accesssed by the following funtion
+    global x, y
     x = time_frame.to_numpy()
     y = pd_cp.to_numpy()
 
-    # Reshaping the 1D array into 2D arrays per the SKlearn algorithm instructions
+
+    # # Reshaping the 1D array into 2D arrays per the SKlearn algorithm instructions
     x = x.reshape(-1,1)
     y = y.reshape(-1,1)
 
-    # Calling the regression method on the data by referencing the x and y coordinates
+
+
+def linearRegression():
+    getData()
+    formatted_data()
+
     regressor = LinearRegression()
     regressor.fit(x, y)
 
