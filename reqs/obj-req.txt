@@ -1,0 +1,40 @@
+-------------------------------------------------
+We will use the following features:
+
+- The price of the stock at the beginning of the day
+- The price of the stock at the end of the day
+- The highest price of the stock during the day
+- The lowest price of the stock during the day
+- The average price of the stock during the day
+- The volume of the stock traded during the day
+
+The goal is to predict whether the price of the stock will go up or down at the end of the day.
+
+To do this, we will use a logistic regression model.
+
+First, we need to prepare the data.
+
+We will use the pandas library to read in the data from the Binance API.
+
+We will also use the numpy library to perform some mathematical operations.
+
+We will use the sklearn library to build the logistic regression model.
+
+We will use the matplotlib library to visualize the data.
+
+We will use the seaborn library to visualize the data.
+
+We will use the pickle library to save the model.
+
+We will use the os library to create the directories for the data and the model.
+
+We will use the shutil library to copy the data
+
+-------------------------------------------------
+
+1. Import the necessary libraries
+2. Load the data from the .csv file
+3. Split the data into training and testing sets
+4. Train the logistic model on the training set
+5. Test the logistic model on the testing set
+6. Predict the price of the stock using the logistic model
