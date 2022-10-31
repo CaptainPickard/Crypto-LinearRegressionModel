@@ -14,7 +14,7 @@ columns = [
 def getData():
     running = True
     while running is True:
-        input_val_crypto = input('Please enter a Crypto Abbrev: ')
+        input_val_crypto = input('Please enter a Crypto Abbreviation: ')
         if input_val_crypto != 'exit':
 
             input_val_timeval = input('Please enter a nemerical time value in days: ')
