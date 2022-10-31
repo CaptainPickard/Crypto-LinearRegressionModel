@@ -7,7 +7,7 @@ from get_data import *
 
 def regression():
     getData()
-    
+
     # Pulling the data we want to base our prediction on
     data_frame = pd.read_csv('data\ETH_1day_data_1800day.csv')
 
@@ -23,7 +23,7 @@ def regression():
     x = x.reshape(-1,1)
     y = y.reshape(-1,1)
 
-    # Calling the regression method on teh data by referencing the x and y coordinates
+    # Calling the regression method on the data by referencing the x and y coordinates
     regressor = LinearRegression()
     regressor.fit(x, y)
 
