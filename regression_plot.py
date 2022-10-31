@@ -2,10 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-import get_data
+from get_data import *
 
 
 def run():
+    getData()
     data_frame = pd.read_csv('data\ETH_1day_data_1800day.csv')
 
     time_frame = data_frame.open_time
