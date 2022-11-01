@@ -1,0 +1,7 @@
+**********************************************************************************
+                                    Objectives
+**********************************************************************************
+
+1. Add more functions for line regression
+2. Combine chart output to run multiple regression functions on the same dataset
+    - Output all charts at once
