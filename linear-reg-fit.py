@@ -5,10 +5,7 @@ import statsmodels.api as sm
 from regression_plot import *
 
 # Read in the data
-students = pd.read_csv('test_data.csv')
-# Create the model here:
-model = sm.OLS.from_formula('score ~ hours_studied', data = students)
-# Fit the model here:
+data_frame = pd.read_csv('data\ADA_1day_data_1800day.csv')
+model = sm.OLS.from_formula('open_time ~ close', data = data_frame)
 results = model.fit()
-# Print the coefficients here:
 print(results.params)
