@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import style
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from get_data import *
@@ -34,12 +35,12 @@ def linearRegression():
     regressor.fit(x, y)
     # Plotting the data using matplotlib
     y_pred = regressor.predict(x)
-    plt.scatter(x, y, color = "#073642")
+    plt.plot(x, y, color = "#073642")
     plt.plot(x, y_pred, color = 'orange')
-    plt.title(f'{input_abbrev} Linear Regression Model')
+    plt.title(f'~{input_abbrev}~ Linear Regression')
     plt.xlabel('Time')
-    plt.ylabel('Price Data in $Dollars')
-    plt.style.context('dark_background')
+    plt.ylabel('Price Data')
+    plt.style.use('Solarize_Light2')
     plt.grid(True, color="#93a1a1", alpha=0.3)
     plt.xticks(())
     plt.yticks(())
