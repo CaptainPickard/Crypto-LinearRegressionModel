@@ -9,6 +9,8 @@ from sklearn.preprocessing import StandardScaler
 from get_data import *
 
 
+
+
 def format_data_input():
     print('--------------------------------CHOOSE A FILE-------------------------------------')
     global input_abbrev
@@ -17,6 +19,8 @@ def format_data_input():
     input_value = input('Please Enter a number in days: >>> ')
     input_abbrev = str(input_abbrev.upper())
     input_value = str(input_value)
+
+
 
 
 def formatted_data():
@@ -29,6 +33,8 @@ def formatted_data():
     y = pd_cp.to_numpy()
     x = x.reshape(-1,1)
     y = y.reshape(-1,1)
+
+
 
 
 def plot_chart():
@@ -44,16 +50,12 @@ def plot_chart():
 
 
 def linearRegression():
-
     getData()
     formatted_data()
-
     regressor = LinearRegression()
     regressor.fit(x, y)
-
     global y_pred
     y_pred = regressor.predict(x)
-
     print('Intercept:', regressor.intercept_)
     print('Coefficients:', regressor.coef_)
     # Plotting the data using matplotlib
